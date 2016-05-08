@@ -1,0 +1,44 @@
+/**
+ *所有字体的定义
+ */
+
+ $fontFamily_PingFang:PingFang;
+ $fontFamily_YaHei:Microsoft YaHei;
+
+
+
+/**
+ *宽度相关的基本尺寸，用于计算rem
+ */
+
+ $psd_width:1080px;  //psd图的宽度
+ $psd_height:1920px - 54px;
+ $psd_width_led:1920px;
+ $minSize:12.0;  //最小的font-size,android下某些版本最小只能是12px
+
+
+/**
+ *根据psd图计算出rem单位
+ */
+
+@function measure($n){
+@return $n/($psd_width/320.0 * $minSize)* 1rem;
+}
+
+@function measurePercent($n, $m){
+@return $n / $m * 100%;
+}
+
+@function measureBy($n, $m){
+@return $n/($m/320.0 * $minSize)* 1rem;
+}
+
+@function measureLED($n){
+@return $n/($psd_width_led/320.0 * $minSize)* 1rem;
+}
+
+
+
+
+
+

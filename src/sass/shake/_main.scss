@@ -1,0 +1,162 @@
+.sky{
+	background:url('../../images/shake.bg.jpg') no-repeat;
+    background-size: cover;
+    height:measure(1866px);
+    max-height:100%;
+
+    > .top-fix{
+    	height:0;
+    }
+
+    > header{
+    	background:url('../../images/shake.title.png') no-repeat;
+		background-size:100% 100%;    	
+    	width:measure(442px);
+    	height:measure(180px);
+    	margin:0 auto;
+    	margin-top:measure(68px);
+    }    
+}
+
+.top-tip, .time{
+	text-align:center;
+}
+
+
+.top-tip{
+	height:measure(100px);
+	line-height:measure(100px);
+	color:#1c778a;
+}
+
+.time{
+	height:measure(126px);
+	line-height:measure(126px);
+	font-size:measure(140px);
+	color:#6decff;
+	font-family:DS;
+
+	> span{
+		font-size:measure(36px);
+		font-family:$fontFamily_YaHei;
+		padding-right:measure(20px);
+	}
+}
+.time.end{
+	font-family:JLX;
+}
+
+.phone{
+	bottom:measure(216px);
+	left:50%;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	position:absolute;
+	width:measure(589px);
+	height:measure(807px);
+	margin:0 auto;
+	margin-top:measure(140px);
+	background:url('../../images/shake.phone.png') no-repeat;
+	background-size:100% 100%;
+	z-index:100;
+}
+
+.bag{
+	position:absolute;
+	bottom:0;
+	z-index:10;
+	width:100%;
+	height:measure(407px);
+	background:url('../../images/shake.bag.png') no-repeat;
+	background-size:100% 100%;
+}
+
+.bmask{
+	position:absolute;
+	top:0;
+	z-index:100;
+	width:100%;
+	height:measure(407px/2);
+	background:url('../../images/shake.bmask.png') no-repeat;
+	background-size:100% 100%;
+}
+
+.bonus{
+	position:relative;
+	height:measure(407px + 807px - 70px);
+}
+
+body{
+	background-color:#0a0627;
+}
+
+.bonus-body{
+	background-color:#ff4225;
+
+	>.sky{
+		height:auto;
+	}
+}
+
+.pack-body{
+	>.sky{
+		position:absolute;
+		width:100%;
+		height:measure(1220px);
+    	
+	}
+
+	.cont{
+		margin-top:measure(90px);
+		background-image:none;
+
+		> section{
+			border-radius:measure(30px) measure(30px) 0 0;
+
+			> header{
+				margin-bottom:measure(50px);
+			}
+
+			> div{
+				height:measure(700px);
+			}
+		}
+
+		.qr{
+			padding:measure(200px);
+			height:measure(800px);
+
+			> img{
+				width:100%;
+				height:100%;
+			}
+		}
+
+		.form{
+			padding-top:measure(140px);
+		}
+	}
+
+	.txt.concern{
+		color:#fecb10;
+		transform:translateY(measure(-100px));
+		-webkit-transform:translateY(measure(-100px));
+	}
+
+	.start-btn{
+		bottom:0;
+		display:none;
+		transform:translate(-50%,measure(350px));
+		-webkit-transform:translate(-50%,measure(350px));
+	}
+	.start-btn.active{
+		display:block;
+	}
+}
+
+#form-container{
+	text-align:center;
+}
+
+
+

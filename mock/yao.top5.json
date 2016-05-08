@@ -1,0 +1,9 @@
+  {
+      "flag": 1, 
+      "msg": "",
+      "data": [
+          { "headimgurl": "images/icon.ruhua.jpg", "name": "张三", "amount": "88.15" },
+          { "headimgurl": "images/icon.ruhua.jpg", "name": "李四", "amount": "20.11" },
+          { "headimgurl": "images/icon.ruhua.jpg", "name": "王五", "amount": "17.88" }
+      ]
+  }

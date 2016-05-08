@@ -1,0 +1,21 @@
+@mixin animation($animationName, $translateToVal, $action) {
+    @-webkit-keyframes #{$animationName} {
+        #{$action} {
+            -webkit-transform:#{$translateToVal};
+        }
+    }
+
+    @keyframes #{$animationName} {
+        #{$action} {
+            transform:#{$translateToVal};
+        }
+    }
+
+    .#{$animationName} {
+        -webkit-animation: #{$animationName} 1s ease both;
+        animation: #{$animationName} 1s ease both;
+    }
+}
+
+@include animation('moveToTop', translateY(-100%), to);
+@include animation('moveFromBottom', translateY(100%), from);

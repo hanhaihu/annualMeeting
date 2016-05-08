@@ -1,0 +1,117 @@
+$border_color:#010101;
+html,body{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+body{
+	background:url('../../images/lottery.bg.jpg') center / 100% 100% no-repeat;
+}
+
+.main{
+	position:absolute;
+	top:measurePercent(370px, 1080px);
+	width:100%;
+	text-align:center;
+}
+
+.frame{
+	display:inline-block;
+	background:url('../../images/lottery.repeat.png') center / contain repeat-x;
+	height:measureLED(214px);
+	padding:0 measureLED(30px);
+	position:relative;
+	border:measureLED(7px) solid $border_color;
+
+	>.portrait{
+		float:left;
+		position:relative;
+		overflow:hidden;
+		width:measureLED(208px);
+		height:100%;
+		margin-left:measureLED(10px);
+		border:measureLED(4px) solid $border_color;
+		border-top:none;
+		border-bottom:none;
+		
+
+		.img{
+			width:100%;
+			height:100%;
+
+			>img{
+				width:100%;
+				height:100%;					
+			}
+		}
+	}
+	>.portrait:first-child{
+		margin-left:0;
+	}
+	>.cover{
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background:url('../../images/lottery.light.png') center / contain repeat-x;
+	}
+}
+
+.num-1.main{
+	top:measurePercent(240px, 1080px);
+}
+.num-1{
+	.frame{
+		height:measureLED(522px);
+
+		>.portrait{
+			width:measureLED(510px);
+		}
+	}
+
+	.txts{
+		padding-top:measureLED(50px);
+		font-size:measureLED(40px);
+	}
+}
+
+.num-2.main{
+	top:measurePercent(290px, 1080px);
+}
+.num-2{
+	.frame{
+		height:measureLED(420px);
+
+		>.portrait{
+			width:measureLED(410px);
+		}
+	}
+
+	.txts{
+		padding-top:measureLED(44px);
+		font-size:measureLED(40px);
+	}
+}
+
+.txts{
+	color:#fff;
+	font-size:measureLED(36px);
+	padding-top:measureLED(76px);
+	padding-left:measureLED(32px);
+	>span{
+		display:inline-block;
+		width:measureLED(220px);
+		text-align:left;
+		overflow:hidden;
+	}
+	>.split{
+		margin:measureLED(26px);
+	}
+}

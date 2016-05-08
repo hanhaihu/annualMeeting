@@ -1,0 +1,84 @@
+html,body{
+	width:100%;
+	height:100%;
+}
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+.main{
+	width:100%;
+	height:100%;
+}
+
+.led{
+	position:relative;
+
+	.abs{
+		position:absolute;
+	}
+
+	.bg{
+		width:100%;
+		height:100%;
+		
+		>.gradual, >.simg{
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+		}
+
+		
+		>.gradual{
+			background:
+			url('../../images/led.bg.png') center / 6.25% 6.9444% repeat
+			,-webkit-radial-gradient(#f30d0d 0%,#590000 100%);
+			background-blend-mode:multiply;
+		}
+		>.flower{
+			width:measurePercent(740px, 2880px);
+			height:measurePercent(632px, 1152px);
+			background:url('../../images/led.flower.png') center / 100% 100% no-repeat;
+			position:absolute;
+			bottom:0;
+			left:0;
+			//background-blend-mode:luminosity;
+		}
+
+		>.lantern{
+			width:measurePercent(656px, 2880px);
+			height:measurePercent(408px, 1152px);
+			background:url('../../images/led.lantern.png') center / 100% 100% no-repeat;
+			position:absolute;
+			top:0;
+		}
+		>.lantern.lf{
+			left:0;
+		}	
+		>.lantern.rt{
+			right:0;
+			transform:rotateY(180deg);
+			-webkit-transform:rotateY(180deg);
+		}
+		>.cloud{
+			position:absolute;
+			background:url('../../images/led.cloud.png') center / 100% 100% no-repeat;
+		}
+		>.cloud.lf{
+			bottom:measurePercent(330px, 1152px);
+			left:measurePercent(700px, 2880px);
+			width:measurePercent(180px, 2880px);
+			height:measurePercent(60px, 1152px);
+		}
+		>.cloud.rt{
+			top:measurePercent(460px, 1152px);
+			right:measurePercent(500px, 2880px);
+			width:measurePercent(360px, 2880px);
+			height:measurePercent(120px, 1152px);
+		}
+	}
+}

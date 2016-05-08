@@ -1,0 +1,25 @@
+{
+  "name": "annualMeeting",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-connect": "^2.2.0",
+    "gulp-notify": "^2.0.1",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "gulp-rename": "*",
+    "gulp-zip": "*",
+    "gulp-imagemin": "^2.0.0",
+    "run-sequence": "^1.1.5"
+  },
+  "author": "",
+  "license": "ISC"
+}

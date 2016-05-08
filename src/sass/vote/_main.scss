@@ -1,0 +1,209 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../../images/led.vote.bg.jpg') center / 100% 100% no-repeat;
+}
+
+body {
+    //
+    .dm {
+        width: 100%;
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+    }
+    .dm .d_show div {
+        font-size: 22px;
+        line-height: measureLED(36px);
+        color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: measure(1280px);
+        z-index: 10;
+    }
+    .dm .nextShow div {
+        font-size: 22px;
+        line-height: measureLED(36px);
+        color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: measure(1280px);
+        z-index: 10;
+    }
+    text-align: center;
+    .time {
+        font-family: YouYuan;
+        font-size: measureLED(36px);
+        color: #fff;
+        position: absolute;
+        left: 37%;
+        top: measureLED(150px);
+        letter-spacing: measureLED(4px);
+        .distance {
+            margin-right: measureLED(30px);
+        }
+    }
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+        width: measureLED(1133px);
+        height: measureLED(836px);
+        -webkit-border-radius: measureLED(20px);
+        -moz-border-radius: measureLED(20px);
+        border-radius: measureLED(20px);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: #900;
+        position: absolute;
+        bottom: measureLED(-100px);
+        left: 21%;
+    }
+    .voteResult {
+        width: measureLED(854px);
+        height: measureLED(666px);
+        list-style: none;
+        text-align: center;
+        margin-left: measureLED(114px);
+        margin-top: measureLED(34px);
+        li:last-child .round:after {
+            display: none;
+        }
+        li {
+            width: measureLED(900px); //854
+            margin-left: auto;
+            margin-right: auto;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            list-style: none;
+            height: measureLED(74px);
+            div,
+            span {
+                display: inline-block;
+            }
+            .leftPart {
+                height: 100%;
+                position: relative;
+                text-align: center;
+                margin-right: measureLED(10px);
+            }
+            .rightPart {
+                position: relative;
+                .progress-bar {
+                    float: left;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    font-size: measureLED(12px);
+                    line-height: measureLED(20px);
+                    color: #fff;
+                    text-align: center;
+                    background-color: #337ab7;
+                    -webkit-box-shadow: inset 0 -measureLED(1px) 0 rgba(0, 0, 0, .15);
+                    box-shadow: inset 0 -measureLED(1px) 0 rgba(0, 0, 0, .15);
+                    -webkit-transition: width .6s ease;
+                    -o-transition: width .6s ease;
+                    transition: width .6s ease;
+                    background-color: #ffd91b;
+                }
+                .progress-bar-warning {
+                    background-color: #ffd91b;
+                }
+                .progress-bar:after {
+                    content: '';
+                    background: url(../../images/flash.png) center / 100% 100% no-repeat;
+                    width: measureLED(180px);
+                    height: measureLED(180px);
+                    position: absolute;
+                    transform: translate(50%, -50%);
+                    -webkit-transform: translate(50%, -50%);
+                    top: 50%;
+                    right: 0;
+                    z-index: 10;
+                }
+            }
+            .show {
+                .showName {
+                    font-family: YouYuan;
+                    font-size: measureLED(30px);
+                    color: #fff;
+                }
+                .team {
+                    font-family: YouYuan;
+                    font-size: measureLED(22px);
+                    color: #fcc;
+                }
+            }
+            .round {
+                width: measureLED(32px);
+                height: measureLED(32px);
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                line-height: measureLED(32px);
+                font-family: Arial;
+                font-size: measureLED(24px);
+                color: #fff;
+                -webkit-border-radius: measureLED(16px);
+                -moz-border-radius: measureLED(16px);
+                border-radius: measureLED(16px);
+                background-color: #e13232;
+                z-index: 1;
+                position: relative;
+            }
+            .round:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                width: measureLED(2px);
+                height: measureLED(74px - 20px);
+                background-color: #e13232;
+            }
+            .process {
+                width: measureLED(800px);
+                height: measureLED(7px);
+                display: none;
+                border-radius: measureLED(2px) measureLED(3px) measureLED(3px) measureLED(2px)/measureLED(3px);
+                background-color: #e13232;
+                border: solid measureLED(1px) #e13232;
+            }
+            .process.active {
+                display: block;
+            }
+            .vote {
+                position: absolute;
+                right: 0;
+                top: measureLED(2px);
+                .count,
+                .percent {
+                    font-family: YouYuan;
+                    font-size: measureLED(30px);
+                    color: #fff;
+                    text-align: right;
+                }
+                .percent {
+                    width: measureLED(100px);
+                }
+                .count {
+                    width: measureLED(140px);
+                }
+            }
+        }
+    }
+}

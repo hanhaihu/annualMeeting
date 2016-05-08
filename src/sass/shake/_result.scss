@@ -1,0 +1,87 @@
+.ad{
+    display:block;    
+    background-size:contain;
+    background-position:center;
+}
+
+.result-body{
+    background:#fff url('../../images/result.red.jpg') repeat-y;
+    background-size:contain;   
+
+    .main > .top-fix, .main > header{
+        display:none;
+    } 
+
+    .cont {
+        > section > div{
+            height:measure(900px);
+        }
+    }
+
+    .sky{
+        background:none;
+    }
+}
+
+.cont {
+    .ad, .money{
+        height:measure(560px);
+        border-radius: measure(10px) measure(10px) 0 0;
+    }
+
+    .money{
+        color:#e84637;
+        font-size:measure(180px);
+        padding-top:measure(320px);
+    }
+
+    .symbol{
+        font-size:measure(80px);
+    }
+
+    .ad{
+        background:#e84637;
+        background-size:100% 100%;
+    }
+
+    .ad-tip{
+        line-height:measure(160px);
+        font-size:measure(48px);
+        font-family:$fontFamily_YaHei;
+        color:#e84637;
+    }
+}
+
+.pack {
+    .nyear{
+        margin:0 auto;
+        transform:translateY( measure(100px)*-1 );
+        -webkit-transform:translateY( measure(100px)*-1 );
+        width:measure(530px);
+        height:measure(148px);
+        background:url('../../images/result.nyear.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .tip{
+        display: block;
+        transform:translateY( measure(100px)*-1 );
+        -webkit-transform:translateY( measure(100px)*-1 );
+    }
+
+    button{
+        position:absolute;
+        background:#f5bc3b;
+        bottom:measure(122px);
+        left:50%;
+        transform:translateX(-50%);
+        -webkit-transform:translateX(-50%);
+        width:measure(520px);
+        height:measure(120px);
+        border:none;
+        border-radius:measure(55px);
+        color:#fefefe;
+        font-size:measure(48px);
+        font-family:$fontFamily_YaHei;
+    }
+}

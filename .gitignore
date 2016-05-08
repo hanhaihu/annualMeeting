@@ -1,0 +1,15 @@
+*~
+.DS_Store
+.idea/*
+*/.idea/*
+.project
+.settings
+.settings/*
+*/idea/*
+*/node_modules/
+*/dist/
+*.log
+*.log.*
+node_modules
+dist
+debug

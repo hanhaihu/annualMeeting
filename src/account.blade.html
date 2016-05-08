@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>账号绑定</title>
+    <link rel="stylesheet" href="css/commons/entry.css">
+    <link rel="stylesheet" href="css/account/account.css" inline>
+
+    <!--form表单-->
+    <script type="text/template" id="tpl-form">
+        <div class="form">
+            <div class="inputs">
+                <input type="number" id="input-number" placeholder="工号" maxlength="5" />
+                <span>+</span>
+                <input type="text" id="input-name" placeholder="姓名" maxlength="4" />
+            </div>
+            <div id="errTxt" class="err"></div>
+            <button id="bindBtn" type="button">绑定</button>
+        </div>
+    </script>
+
+    <script type="text/template" id="tpl-bind">
+        <div class="bind">
+            绑定成功<br>
+            账号:{number}{name}
+        </div>
+    </script>
+
+    <!--显示二维码-->
+    <script type="text/template" id="tpl-qr" data-body="pack-body">
+        <div class="qr">
+            <img src="{img}"/>
+        </div>
+    </script>
+
+    <script type="text/template" id="openid">
+        <?php $openid = isset($openid) ? $openid : ''; echo $openid; ?>
+    </script>
+</head>
+
+<body class="pack-body">
+    <main class="acc">
+        <article class="cont">
+            <section>
+                <header></header>
+                <div id="pack-top">
+
+                </div>
+            </section>
+        </article>
+        <article class="pack">
+            <header>
+                <div class="logo"><img src="images/logo.png" /></div>
+            </header>
+            <section id="pack-tip" class="txt">
+            </section>
+        </article>
+    </main>
+
+    <script type="text/javascript" src="plugin/zepto.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/account.js" inline></script>
+</body>
+
+</html>

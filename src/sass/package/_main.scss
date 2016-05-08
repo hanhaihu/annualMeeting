@@ -1,0 +1,157 @@
+$red_color:#e13232;
+
+html,body{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+body{
+	background:url('../../images/yao.bg.jpg') center / 100% 100% no-repeat;
+}
+
+.top5{
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	top:measurePercent(200px, 1080px);
+	color:#fff;
+
+	td{
+		vertical-align:middle;
+		position:relative;
+	}
+
+	.num > div{
+		position:relative;
+		height:measureLED(40px);
+		width:measureLED(40px);
+		line-height:measureLED(40px);
+		border-radius:50%;
+		background-color:$red_color;
+		font-size:measureLED(30px);
+		font-family:Arial;
+		text-align:center;
+	}
+
+	.num > div:before{
+		content:'';
+		top:0;
+		left:50%;
+		transform:translate(measureLED(-2px), measureLED(40px));
+		-webkit-transform:translate(measureLED(-2px), measureLED(40px));
+		position:absolute;
+		width:measureLED(4px);
+		height:measureLED(100px);
+		background:$red_color;
+	}
+
+	tr:last-child .num > div:before{
+		display:none;
+	}
+
+	.img :before{
+		content:'';
+		display:inline-block;
+		height:measureLED(4px);
+		width:measureLED(40px);
+		background-color:$red_color;
+	}
+
+	.img{
+		padding:measureLED(10px) 0;
+	}
+
+	.img > div{
+		height:measureLED(120px);
+		width:measureLED(120px + 40px);
+		
+		>img{
+			border-radius:50%;
+			border:measureLED(4px) solid $red_color;
+			position:absolute;
+			height:measureLED(120px);
+			width:measureLED(120px);
+			border-radius:50%;
+			z-index:100;
+		}
+		
+	}
+
+	.name > div{
+		height:measureLED(74px);
+		width:measureLED(450px);
+		line-height:measureLED(74px);
+		background:#990000;
+		transform:translateX(measureLED(-20px));
+		-webkit-transform:translateX(measureLED(-20px));
+		padding-left:measureLED(50px);
+		z-index:10;
+		font-family:YouYuan;
+		font-size:measureLED(36px);
+		position:relative;
+	}
+
+	.name > div:after{
+		position:absolute;
+		right:0;
+		display:inline-block;
+		content:' ';
+		height:100%;
+		width:measureLED(28px);
+		transform:translateX(measureLED(20px));
+		-webkit-transform:translateX(measureLED(20px));
+		background:url('../../images/yao.cri.png') center / 100% 100% no-repeat;
+	}
+
+	.symbol > div{
+		width:measureLED(64px);
+		height:measureLED(64px);
+		line-height:measureLED(64px);
+		text-align:center;
+		color:#fff9e5;
+		background:#f2c11f;
+		border-radius:50%;
+		transform:translateX(measureLED(-10px));
+		-webkit-transform:translateX(measureLED(-10px));
+		font-size:measureLED(36px);
+	}
+
+	.amount > div{
+		font-size:measureLED(48px);
+	}
+
+}
+
+.diff{
+	position:absolute;
+	left:50%;
+	top:40%;
+	transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
+	color:#fff;
+	>.txt{
+		
+		font-size:measureLED(48px);
+		font-family:$fontFamily_YaHei;
+
+		>span{
+			color:#f8c939;
+		}
+	}
+
+	>.time{
+		font-size:measureLED(40px);
+		>span{
+			font-size:measureLED(200px);
+			font-family:DS;
+		}
+	}
+}

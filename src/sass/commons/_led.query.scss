@@ -1,0 +1,25 @@
+@for $i from 320 through 1920 {
+    @if $i%10==0 {
+        @if $i==320 {
+            @media screen and(max-width: $i*1px) {
+                html {
+                    font-size: $i / 320.0 * $minSize * 1px;
+                }
+            }
+        }
+        @else if $i==1920 {
+            @media screen and(min-width: ($i - 9)*1px) {
+                html {
+                    font-size: $i / 320.0 * $minSize * 1px;
+                } 
+            }
+        }
+        @else {
+            @media screen and(min-width: ($i - 9)*1px) and (max-width: $i*1px) {
+                html {
+                    font-size: $i / 320.0 * $minSize * 1px
+                }
+            }
+        }
+    }
+}
