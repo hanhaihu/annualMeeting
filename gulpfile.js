@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 
 var connect = require('gulp-connect');
 var notify = require('gulp-notify');
-var rename = require('gulp-rename');
+var rename = require('gulp-rename');  
 var gutil = require('gulp-util');
 var imagemin = require('gulp-imagemin');
 
@@ -20,14 +20,15 @@ gulp.task('clean', function() {
     return gulp.src(dist).pipe(clean());
 });
 
+
+//打包后重命名文件
 gulp.task('rename', function() {
-    return gulp.src(dist + '/*.html')
+    return gulp.src(dist + '/pages/*.html')
         .pipe(rename({
             extname: '.php'
         }))
         .pipe(gulp.dest(dist));
 });
-
 
 //sass css 
 gulp.task('sass', function() {
@@ -38,7 +39,7 @@ gulp.task('sass', function() {
 
 //实时监听文件修改
 gulp.task('watch', function(cb) {
-    gulp.watch(['src/**/*', 'src/*.html'], function() {
+    gulp.watch(['src/**/*'], function() {
         runSequence(['copy', 'sass'], function() {
             gutil.log('watch triggered')
         });
@@ -47,10 +48,13 @@ gulp.task('watch', function(cb) {
 });
 
 
+//文件夹的拷贝
 gulp.task('copy', function() {
-    return gulp.src(['src/!(sass)*/**', 'src/*.html']).pipe(gulp.dest('dist'));
+    return gulp.src(['src/!(sass)*/**']).pipe(gulp.dest('dist'));
 });
 
+
+//压缩图片大小子任务
 gulp.task('clear-images', function() {
     return gulp.src('dis/images/**').pipe(clean());
 });
@@ -63,10 +67,16 @@ gulp.task('compress-images', function() {
         .pipe(gulp.dest('dist/images'));
 });
 
+
+
+//压缩图片
 gulp.task('images', function() {
     runSequence('clear-images', 'compress-images');
 });
 
+
+
+//编译完成打包成zip文件
 gulp.task('zip',function() {
   return gulp
       .src([dist + '/**/*', '!'+dist+'/*.html', '!'+dist+'/*.zip'])
@@ -86,7 +96,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('reloadserver', function() {
-    gulp.src('dist/**/*.html')
+    gulp.src('dist/pages/*.html')
         .pipe(connect.reload());
 });
 
@@ -99,7 +109,7 @@ gulp.task('liveserver', ['webserver'], function() {
 
 //发布打包
 gulp.task('build', function() {
-    runSequence('clean', 'copy', 'sass', 'rename', 'images');
+    runSequence('clean', 'copy', 'sass', 'rename', 'images','zip');
 });
 
 //开发打包
@@ -113,3 +123,9 @@ gulp.task('default', function() {
     console.log('开启 liveserver:\n\t 新建tab页面，切换到工作目录,运行 > `gulp liveserver`,goto http://localhost:8080');
 
 });
+
+
+
+
+
+

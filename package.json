@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp dev",
+    "build":" gulp build"
   },
   "dependencies": {},
   "devDependencies": {
@@ -20,6 +20,7 @@
     "gulp-imagemin": "^2.0.0",
     "run-sequence": "^1.1.5"
   },
-  "author": "",
+  "repository":"git@github.com:hanhaihu/annualMeeting.git",
+  "author": "区传瑜",
   "license": "ISC"
 }
